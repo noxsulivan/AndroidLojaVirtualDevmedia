@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+
+// fazer alguns comentarios pertinentes
 public class LoginActivity extends Activity {
 
 	private EditText edtLogin;
