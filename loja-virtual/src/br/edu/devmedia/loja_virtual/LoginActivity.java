@@ -1,6 +1,9 @@
 package br.edu.devmedia.loja_virtual;
 
+import android.R.drawable;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -17,7 +20,6 @@ public class LoginActivity extends Activity {
 	private EditText edtLogin;
 
 	private EditText edtSenha;
-	private EditText edtTeste;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,15 @@ public class LoginActivity extends Activity {
 		switch (idMenuItem) {
 		case R.id.menuSair:
 			finish();
+			break;
+		case R.id.menuSobre:
+			AlertDialog.Builder alertBuilder = new AlertDialog.Builder(
+					LoginActivity.this);
+			alertBuilder.setTitle("Sobre a Loja Virtual");
+			alertBuilder.setIcon(R.drawable.i);
+			alertBuilder.setNeutralButton("Ok", null);
+			alertBuilder.setMessage("Fazendo um teste de exibição de mensagens no Android");
+			alertBuilder.show();
 			break;
 		}
 
