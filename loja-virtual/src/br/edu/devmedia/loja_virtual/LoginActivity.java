@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.EditText;
 
 
+
+
+// outro comentário
 // fazer alguns comentarios pertinentes
 public class LoginActivity extends Activity {
 
