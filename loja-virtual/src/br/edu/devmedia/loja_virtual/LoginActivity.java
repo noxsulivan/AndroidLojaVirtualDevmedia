@@ -1,10 +1,9 @@
 package br.edu.devmedia.loja_virtual;
 
-import android.R.drawable;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,10 +11,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import br.edu.devmedia.loja_virtual.BO.LoginBO;
+import br.edu.devmedia.loja_virtual.util.MensagemUtil;
 
-// outro comentário
-// fazer alguns comentarios pertinentes
 public class LoginActivity extends Activity {
+
+	LoginBO loginBo;
 
 	private EditText edtLogin;
 
@@ -47,23 +48,26 @@ public class LoginActivity extends Activity {
 		int idMenuItem = item.getItemId();
 		switch (idMenuItem) {
 		case R.id.menuSair:
-			finish();
+			MensagemUtil.addMsgConfirm(LoginActivity.this, "Logout",
+					"Deseja deslogar?", R.drawable.logout,
+					new OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							finish();
+						}
+					});
 			break;
 		case R.id.menuSobre:
-			AlertDialog.Builder alertBuilder = new AlertDialog.Builder(
-					LoginActivity.this);
-			alertBuilder.setTitle("Sobre a Loja Virtual");
-			alertBuilder.setIcon(R.drawable.i);
-			alertBuilder.setNeutralButton("Ok", null);
-			alertBuilder.setMessage("Fazendo um teste de exibição de mensagens no Android");
-			alertBuilder.show();
+			MensagemUtil.addMsgOk(LoginActivity.this,
+					getString(R.string.lbl_sobre),
+					getString(R.string.msg_sobre), R.drawable.i);
 			break;
 		}
 
 		return true;
 	}
 
-	private class LoadingAsync extends AsyncTask<Void, Void, Void> {
+	private class LoadingAsync extends AsyncTask<Void, Void, String> {
 
 		private ProgressDialog progressDialog = new ProgressDialog(
 				LoginActivity.this);
@@ -75,32 +79,17 @@ public class LoginActivity extends Activity {
 		}
 
 		@Override
-		protected Void doInBackground(Void... params) {
+		protected String doInBackground(Void... params) {
 			String login = edtLogin.getText().toString();
 			String senha = edtSenha.getText().toString();
 
-			boolean dadosValidos = true;
-			if (login == null || login.equals("")) {
-				dadosValidos = false;
-				edtLogin.setError(getString(R.string.msg_login_obg));
-			}
+			loginBo = new LoginBO(LoginActivity.this);
 
-			if (senha == null || senha.equals("")) {
-				dadosValidos = false;
-				edtSenha.setError(getString(R.string.msg_senha_obg));
-			}
-
-			if (dadosValidos) {
-				Intent i = new Intent(LoginActivity.this,
-						DashBoardActivity.class);
-				startActivity(i);
-				finish();
-			}
-			return null;
+			return loginBo.validarLogin(login, senha);
 		}
 
 		@Override
-		protected void onPostExecute(Void result) {
+		protected void onPostExecute(String result) {
 			progressDialog.dismiss();
 		}
 	}

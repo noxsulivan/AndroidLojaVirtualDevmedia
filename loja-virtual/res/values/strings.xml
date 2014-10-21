@@ -13,5 +13,6 @@
 	<!-- Mensagens -->
     <string name="msg_login_obg">Login Obrigatório!</string>
     <string name="msg_senha_obg">Senha Obrigatória!</string>
+    <string name="msg_sobre">Criação de loja virtual em Android. Curso da Devmedia</string>
 
 </resources>
