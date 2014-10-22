@@ -91,7 +91,17 @@ public class LoginActivity extends Activity {
 		@Override
 		protected void onPostExecute(String result) {
 			progressDialog.dismiss();
+
+			if (result == null) {
+				Intent i = new Intent(LoginActivity.this,
+						DashBoardActivity.class);
+				startActivity(i);
+				finish();
+			}
+			else
+			{
+				MensagemUtil.addMsg(LoginActivity.this, result);
+			}
 		}
 	}
-
 }

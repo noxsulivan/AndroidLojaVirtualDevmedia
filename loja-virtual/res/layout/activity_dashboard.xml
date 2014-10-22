@@ -3,6 +3,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnListar"
+            style="@style/BotaoDash"
+            android:drawableTop="@drawable/about"
+            android:text="@string/lbl_listar" />
+
+        <Button
+            android:id="@+id/btnPesquisar"
+            style="@style/BotaoDash"
+            android:drawableTop="@drawable/search"
+            android:text="@string/lbl_pesquisar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/BotaoDash"
+            android:drawableTop="@drawable/about"
+            android:text="@string/lbl_listar" />
+
+        <Button
+            style="@style/BotaoDash"
+            android:drawableTop="@drawable/search"
+            android:text="@string/lbl_pesquisar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/BotaoDash"
+            android:drawableTop="@drawable/about"
+            android:text="@string/lbl_listar" />
+
+        <Button
+            style="@style/BotaoDash"
+            android:drawableTop="@drawable/search"
+            android:text="@string/lbl_pesquisar" />
+    </LinearLayout>
 
 </LinearLayout>
