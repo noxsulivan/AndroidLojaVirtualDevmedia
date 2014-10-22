@@ -6,13 +6,4 @@
     <dimen name="padding_small">6dp</dimen>
     <dimen name="padding_medium">10dp</dimen>
     <dimen name="padding_large">16dp</dimen>
-
-    <style name="BotaoDash">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:background">@null</item>
-        <item name="android:padding">@dimen/padding_small</item>
-    </style>
-
 </resources>
