@@ -22,8 +22,9 @@
         <Button
             android:id="@+id/btnPesquisar"
             style="@style/BotaoDash"
-            android:drawableTop="@drawable/search"
-            android:text="@string/lbl_pesquisar" />
+            android:drawableTop="@drawable/search_click_img"
+            android:text="@string/lbl_pesquisar"
+            android:textColor="@drawable/search_click_color" />
     </LinearLayout>
 
     <LinearLayout
@@ -41,7 +42,8 @@
         <Button
             style="@style/BotaoDash"
             android:drawableTop="@drawable/search"
-            android:text="@string/lbl_pesquisar" />
+            android:text="@string/lbl_pesquisar"
+            android:textColor="@drawable/search_click_color" />
     </LinearLayout>
 
     <LinearLayout
@@ -59,7 +61,8 @@
         <Button
             style="@style/BotaoDash"
             android:drawableTop="@drawable/search"
-            android:text="@string/lbl_pesquisar" />
+            android:text="@string/lbl_pesquisar"
+            android:textColor="@drawable/search_click_color" />
     </LinearLayout>
 
 </LinearLayout>

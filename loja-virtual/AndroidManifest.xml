@@ -23,6 +23,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".DashBoardActivity" />
+        <activity
+            android:name=".ActivityDashBoardList"
+            android:label="@string/title_activity_activity_dash_board_list" >
+        </activity>
+        <activity
+            android:name=".DashboardListActivity"
+            android:label="@string/title_activity_dashboard_list" >
+        </activity>
     </application>
 
 </manifest>
