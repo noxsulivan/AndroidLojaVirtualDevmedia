@@ -28,7 +28,7 @@
             android:label="@string/title_activity_activity_dash_board_list" >
         </activity>
         <activity
-            android:name=".DashboardListActivity"
+            android:name=".DashBoardListActivity"
             android:label="@string/title_activity_dashboard_list" >
         </activity>
     </application>

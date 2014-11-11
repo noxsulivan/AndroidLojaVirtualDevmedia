@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Loja Virtual Devmedia</string>
+    <string name="app_name">Aplicação</string>
 
     <!-- Globais -->
     <string name="lbl_listar">Listar</string>
@@ -17,7 +17,7 @@
     <!-- Mensagens -->
     <string name="msg_login_obg">Login Obrigatório!</string>
     <string name="msg_senha_obg">Senha Obrigatória!</string>
-    <string name="msg_sobre">Copyright 2013 | Devmedia\n Todos os direitos reservados!</string>
+    <string name="msg_sobre">Copyright 2013 | </string>
     <string name="msg_logout">Deseja realmente deslogar?</string>
     <string name="title_activity_activity_dash_board_list">ActivityDashBoardList</string>
     <string name="hello_world">Hello world!</string>
