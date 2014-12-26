@@ -7,6 +7,9 @@ import android.widget.Toast;
 
 public class MensagemUtil {
 	
+	
+	//
+	
 	/**
 	 * Método de criação de mensagens rápidas.
 	 * 

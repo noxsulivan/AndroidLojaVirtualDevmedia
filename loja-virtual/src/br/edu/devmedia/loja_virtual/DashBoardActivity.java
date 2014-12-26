@@ -25,7 +25,7 @@ public class DashBoardActivity extends Activity {
 		int id = item.getItemId();
 		switch (id) {
 		case 1:
-			Intent intent = new Intent(this, DashBoardListActivity.class);
+			Intent intent = new Intent(this, DashBoardActivity.class);
 			startActivity(intent);
 			finish();
 			break;
