@@ -11,8 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import bo.LoginBO;
 import br.edu.devmedia.*;
+import br.edu.devmedia.loja_virtual.bo.LoginBO;
 import br.edu.devmedia.loja_virtual.util.MensagemUtil;
 
 public class LoginActivity extends Activity {

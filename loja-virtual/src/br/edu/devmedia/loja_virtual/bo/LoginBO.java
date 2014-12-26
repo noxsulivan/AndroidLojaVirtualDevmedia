@@ -1,4 +1,4 @@
-package bo;
+package br.edu.devmedia.loja_virtual.bo;
 
 import br.edu.devmedia.loja_virtual.R;
 import android.content.Context;

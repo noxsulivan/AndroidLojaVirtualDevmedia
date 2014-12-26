@@ -24,12 +24,8 @@
         </activity>
         <activity android:name=".DashBoardActivity" />
         <activity
-            android:name=".ActivityDashBoardList"
-            android:label="@string/title_activity_activity_dash_board_list" >
-        </activity>
-        <activity
             android:name=".DashBoardListActivity"
-            android:label="@string/title_activity_dashboard_list" >
+            android:label="@string/title_activity_dash_board_list" >
         </activity>
     </application>
 
