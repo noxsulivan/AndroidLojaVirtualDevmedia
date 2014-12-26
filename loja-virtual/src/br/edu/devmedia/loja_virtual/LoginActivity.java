@@ -15,10 +15,9 @@ import bo.LoginBO;
 import br.edu.devmedia.*;
 import br.edu.devmedia.loja_virtual.util.MensagemUtil;
 
-
 public class LoginActivity extends Activity {
 
-	LoginBO loginBo;	
+	LoginBO loginBo;
 
 	private EditText edtLogin;
 
@@ -99,9 +98,7 @@ public class LoginActivity extends Activity {
 						DashBoardActivity.class);
 				startActivity(i);
 				finish();
-			}
-			else
-			{
+			} else {
 				MensagemUtil.addMsg(LoginActivity.this, result);
 			}
 		}
